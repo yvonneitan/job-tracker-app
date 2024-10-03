@@ -15,15 +15,16 @@ function ActivePage() {
 
   useEffect(() => {
     async function getData() {
-      const response = await axios.get(`${baseUrl}/data`);
+      const response = await axios.get(`${dataUrl}`);
       //set videos data to response.data
       setJobs(response.data);
+      console.log("my data is ", jobs);
     }
     getData();
-  }, []);
+  }, [activeJobs]);
   useEffect(() => {
     //populate active jobs from JSON file
-    const populateJobs = jobsData.map((job) => ({
+    const populateJobs = jobs.map((job) => ({
       id: job.id,
       applicationDate: new Date().toLocaleDateString(),
       jobTitle: job.job_title,

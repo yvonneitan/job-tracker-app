@@ -1,4 +1,4 @@
-import AppsForm from '../../components/AppsForm/AppsForm'; // Fix typo in 'components'
+import AppsForm from "../../components/AppsForm/AppsForm"; // Fix typo in 'components'
 
 function HomePage() {
   return (
