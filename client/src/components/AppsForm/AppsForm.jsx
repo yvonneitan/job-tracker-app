@@ -25,7 +25,7 @@ const AppsForm = () => {
     console.log('Form submitted:', formData);
 
     try {
-      const response = await fetch('http://localhost:5000/submit', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,6 @@ const AppsForm = () => {
 
       if (response.ok) {
         console.log('Form submitted successfully');
-        // Optionally, reset the form or give feedback to the user
         setFormData({
           timeOfApplication: '',
           jobTitle: '',
