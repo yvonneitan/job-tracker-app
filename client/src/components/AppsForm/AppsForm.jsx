@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AppsForm.scss'
+import './AppsForm.scss';
 
 const AppsForm = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +20,35 @@ const AppsForm = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+
+    try {
+      const response = await fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        // Optionally, reset the form or give feedback to the user
+        setFormData({
+          timeOfApplication: '',
+          jobTitle: '',
+          company: '',
+          jobLink: '',
+          deadline: ''
+        });
+      } else {
+        console.error('Error submitting form:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
