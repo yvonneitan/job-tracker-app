@@ -4,11 +4,23 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import jobsData from "../../data/jobs.json";
 
+const baseUrl = "http://localhost:8080";
+const dataUrl = "http://localhost:8080/data";
+
 function ActivePage() {
   // const [jobStatus, setJobStatus] = useState("Active");
+  const [jobs, setJobs] = useState([]);
   const [activeJobs, setActiveJobs] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    async function getData() {
+      const response = await axios.get(`${baseUrl}/data`);
+      //set videos data to response.data
+      setJobs(response.data);
+    }
+    getData();
+  }, []);
   useEffect(() => {
     //populate active jobs from JSON file
     const populateJobs = jobsData.map((job) => ({
