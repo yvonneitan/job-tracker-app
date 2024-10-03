@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./AppsForm.scss";
+
+const baseUrl = "http://localhost:8080";
+const dataUrl = "http://localhost:8080/data";
 
 const AppsForm = () => {
   const [formData, setFormData] = useState({
-    timeOfApplication: "",
-    jobTitle: "",
+    time_of_application: "",
+    job_title: "",
     company: "",
-    jobLink: "",
+    job_link: "",
     deadline: "",
   });
 
@@ -25,21 +29,15 @@ const AppsForm = () => {
     console.log("Form submitted:", formData);
 
     try {
-      const response = await fetch("", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
+      const response = await axios.post(baseUrl, formData);
+      console.log("my response is ", response);
+      if (response) {
         console.log("Form submitted successfully");
         setFormData({
-          timeOfApplication: "",
-          jobTitle: "",
+          time_of_application: "",
+          job_title: "",
           company: "",
-          jobLink: "",
+          job_link: "",
           deadline: "",
         });
       } else {
@@ -55,30 +53,30 @@ const AppsForm = () => {
       <h2 className="form__title">New Job Application Form</h2>
       <form className="form__body" onSubmit={handleSubmit}>
         <div className="form__group form__group--time">
-          <label className="form__label" htmlFor="timeOfApplication">
+          <label className="form__label" htmlFor="time_of_application">
             Time of Application
           </label>
           <input
             className="form__input"
             type="time"
-            id="timeOfApplication"
-            name="timeOfApplication"
-            value={formData.timeOfApplication}
+            id="time_of_application"
+            name="time_of_application"
+            value={formData.time_of_application}
             onChange={handleChange}
             required
           />
         </div>
 
         <div className="form__group form__group--job-title">
-          <label className="form__label" htmlFor="jobTitle">
+          <label className="form__label" htmlFor="job_title">
             Job Title
           </label>
           <input
             className="form__input"
             type="text"
-            id="jobTitle"
-            name="jobTitle"
-            value={formData.jobTitle}
+            id="job_title"
+            name="job_title"
+            value={formData.job_title}
             onChange={handleChange}
             placeholder="Enter job title"
             required
@@ -102,15 +100,15 @@ const AppsForm = () => {
         </div>
 
         <div className="form__group form__group--job-link">
-          <label className="form__label" htmlFor="jobLink">
+          <label className="form__label" htmlFor="job_link">
             Link to the Job on the Company Site
           </label>
           <input
             className="form__input"
             type="url"
-            id="jobLink"
-            name="jobLink"
-            value={formData.jobLink}
+            id="job_link"
+            name="job_link"
+            value={formData.job_link}
             onChange={handleChange}
             placeholder="Enter URL"
             required

@@ -1,17 +1,1 @@
-[
-  {
-    "id": "1",
-    "job_title": "Software Engineer",
-    "company": "Tech Innovations Inc.",
-    "job_link": "https://techinnovations.com/careers/software-engineer",
-    "deadline": "2024-10-15"
-  },
-  {
-    "id": "2",
-    "job_title": "Marketing Specialist",
-    "company": "Creative Solutions Ltd.",
-    "job_link": "https://creativesolutions.com/careers/marketing-specialist",
-    "deadline": "2024-11-01"
-  }
-
-]
+[{"id":"1","job_title":"Software Engineer","company":"Tech Innovations Inc.","job_link":"https://techinnovations.com/careers/software-engineer","time_of_application":"19:12","deadline":"2024-10-15"},{"id":"2","job_title":"Marketing Specialist","company":"Creative Solutions Ltd.","job_link":"https://creativesolutions.com/careers/marketing-specialist","time_of_application":"19:12","deadline":"2024-11-01"},{"id":"534b7a93-702e-41eb-af5d-e51909476b2b","job_title":"new job","company":"new Solutions Ltd.","job_link":"https://new.com/careers/marketing-specialist","time_of_application":"19:12","deadline":"2024-12-05"},{"id":"14607e41-4a2b-4408-b1db-92b3b3d272e7","job_title":"new job","company":"new Solutions Ltd.","job_link":"https://new.com/careers/marketing-specialist","time_of_application":"19:12","deadline":"2024-12-05"},{"id":"7bc63f5a-04a5-41d6-8794-f763edf8d971","job_title":"napper","company":"napperoo","job_link":"https://nap.com","time_of_application":"18:33","deadline":"2024-10-22"},{"id":"5a26b146-96f5-4175-aa21-bfc111e44603","job_title":"ux designer","company":"brainstation","job_link":"https:/brainstation.com","time_of_application":"21:37","deadline":"2024-10-15"}]

@@ -21,9 +21,11 @@ function ActivePage() {
       console.log("my data is ", jobs);
     }
     getData();
-  }, [activeJobs]);
+  }, []);
+
   useEffect(() => {
     //populate active jobs from JSON file
+
     const populateJobs = jobs.map((job) => ({
       id: job.id,
       applicationDate: new Date().toLocaleDateString(),
@@ -34,7 +36,7 @@ function ActivePage() {
       status: "Active", //default status
     }));
     setActiveJobs(populateJobs);
-  }, []);
+  }, [jobs]);
 
   const handleStatusChange = (e, jobId) => {
     const newStatus = e.target.value;

@@ -26,6 +26,7 @@ router.post("/", (_req, _res) => {
     job_title: _req.body.job_title,
     company: _req.body.company,
     job_link: _req.body.job_link,
+    time_of_application: _req.body.time_of_application,
     deadline: _req.body.deadline,
   };
 
