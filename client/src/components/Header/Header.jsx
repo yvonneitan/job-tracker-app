@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      <h1 className="header__title">Job Applications</h1>
+      <h1 className="header__title">Job Hunt or Haunt?</h1>
+      <h3 className="header__subtitle">
+        --the ultimate job tracker for the brave...
+      </h3>
       <Link to={`/`} className="header__link">
         HomePage
       </Link>
