@@ -51,6 +51,10 @@ const AppsForm = () => {
   };
 
   return (
+    <main className="homepage">
+       <div className="homepage__subtitle">
+        <h3 className="homepage__subtitle-name">--the ultimate job tracker for the brave...</h3>
+      </div>
     <div className="form">
       <h2 className="form__title">New Job Application Form</h2>
       <form className="form__body" onSubmit={handleSubmit}>
@@ -139,6 +143,7 @@ const AppsForm = () => {
         </div>
       </form>
     </div>
+    </main>
   );
 };
 

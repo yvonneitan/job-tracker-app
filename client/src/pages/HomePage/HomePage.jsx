@@ -1,12 +1,12 @@
-import AppsForm from "../../components/AppsForm/AppsForm"; // Fix typo in 'components'
+import AppsForm from "../../components/AppsForm/AppsForm"; 
 
 function HomePage() {
   return (
     <>
-      {/* <div>HomePage</div> */}
       <AppsForm />
     </>
   );
 }
 
 export default HomePage;
+ 

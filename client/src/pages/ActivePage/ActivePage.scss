@@ -1,3 +1,9 @@
+
+@use "../../partials/Mixins/mixins.scss" as *;
+
+@include phone{
+
+
 .active {
   background-color: #222; // Dark background
   color: white;
@@ -53,4 +59,5 @@
     padding: 10px;
     border: 1px solid orange; // Cell borders
   }
+}
 }

@@ -6,6 +6,7 @@ import Header from "./components/Header/Header.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ActivePage from "./pages/ActivePage/ActivePage.jsx";
 import InactivePage from "./pages/InactivePage/InactivePage.jsx";
+import AppsForm from "./components/AppsForm/AppsForm.jsx";
 
 function App() {
   return (
