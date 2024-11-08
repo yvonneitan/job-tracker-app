@@ -1,0 +1,56 @@
+.active {
+  background-color: #222; // Dark background
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  &__header {
+    font-family: “Creepster”, cursive; // Spooky font
+    color: orange;
+    text-shadow: 0 0 10px orange, 0 0 20px purple; // Glowing effect
+    margin-bottom: 20px;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid orange;
+  }
+  &__header-row {
+    background-color: #444; // Darker background for header
+    color: orange;
+  }
+  &__details-row {
+    background-color: #333; // Row background
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #555; // Highlight row on hover
+    }
+  }
+  &__link a {
+    color: orange;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: white; // Change link color on hover
+    }
+  }
+  &__status-dropdown {
+    background-color: #666; // Dropdown background
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    &:hover {
+      background-color: orange; // Change dropdown background on hover
+    }
+  }
+  &__date,
+  &__title,
+  &__company,
+  &__deadline,
+  &__status {
+    padding: 10px;
+    border: 1px solid orange; // Cell borders
+  }
+}

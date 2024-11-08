@@ -1,0 +1,45 @@
+.inactive {
+  background-color: #1b1b1b; // Dark background for a spooky feel
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  &__header {
+    font-family: “Creepster”, cursive; // Spooky font
+    color: orange;
+    text-shadow: 0 0 10px orange, 0 0 20px purple; // Glowing effect
+    margin-bottom: 20px;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid orange; // Border for the table
+  }
+  &__header-row {
+    background-color: #444; // Darker background for header
+    color: orange;
+  }
+  &__details-row {
+    background-color: #333; // Row background
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #555; // Highlight row on hover
+    }
+  }
+  &__link a {
+    color: orange;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: white; // Change link color on hover
+    }
+  }
+  &__date,
+  &__title,
+  &__company,
+  &__deadline {
+    padding: 10px;
+    border: 1px solid orange; // Cell borders
+  }
+}
